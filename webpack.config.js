@@ -7,7 +7,7 @@ const path = require('path'),
 const config = {
   mode: 'development',  // development   production
   entry: {
-    index: path.resolve(__dirname, './src/js/tab.js'),
+    tab: path.resolve(__dirname, './src/js/tab.js'),
     jquery: path.resolve(__dirname, './src/js/jquery.min.js'),
   },
   output: {
@@ -87,11 +87,11 @@ const config = {
         removeComment: true,
         collapseWhitespace: true
       },
-      filename: 'index.html',
-      template: path.resolve(__dirname, 'src/index.html'),
+      filename: 'tab.html',
+      template: path.resolve(__dirname, 'src/page/tab.html'),
       title: '仿美团分类选项列表',
       chunksSortMode: 'manual',
-      chunks: ['jquery', 'index'],
+      chunks: ['jquery', 'tab'],
       excludeChunks: ['node_modules'],
       hash: true
     }),

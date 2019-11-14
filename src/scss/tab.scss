@@ -1,0 +1,43 @@
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+
+  .tab-wrapper {
+    box-shadow: 0 0 5px #ddd;
+
+    .nav {
+      position: relative;
+      height: 60px;
+      border-bottom: 1px solid #ddd;
+
+      .line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100px;
+        height: 0;
+        border-bottom: 1px solid #f60;
+        transition: left .3s;
+      }
+
+      .item {
+        float: left;
+        width: 100px;
+        height: 100%;
+        line-height: 60px;
+        text-align: center;
+        transition: color .3s;
+
+        a {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+      .item.current a {
+        color: #f60;
+      }
+    }
+  }
+}
